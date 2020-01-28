@@ -8,11 +8,12 @@ class DrawerCustomPainter extends CustomPainter {
   double width;
   bool isEndDrawer;
 
-  DrawerCustomPainter(double startingLoc, int itemsLength, this.color, this.textDirection, this.width, this.isEndDrawer) {
+  DrawerCustomPainter(double startingLoc, int itemsLength, this.color,
+      this.textDirection, this.width, this.isEndDrawer) {
     //Determine % for each item
     final span = 1.0 / itemsLength;
     //standard deviation from location
-    s = width/100 * .1;
+    s = width / 100 * .1;
     double l = startingLoc + (span - s) / 2;
     loc = l;
   }
@@ -35,7 +36,7 @@ class DrawerCustomPainter extends CustomPainter {
         (loc + s * 0.50) * size.height,
       )
       ..cubicTo(
-         width * 0.50,
+        width * 0.50,
         (loc + s) * size.height,
         width,
         (loc + s - s * 0.10) * size.height,
@@ -43,7 +44,7 @@ class DrawerCustomPainter extends CustomPainter {
         (loc + s + 0.02) * size.height,
       )
       ..lineTo(width, size.height)
-      ..lineTo(0,size.height)
+      ..lineTo(0, size.height)
       ..lineTo(0, 0)
       ..close();
     final rightPath = Path()
@@ -58,7 +59,7 @@ class DrawerCustomPainter extends CustomPainter {
         (loc + s * 0.50) * size.height,
       )
       ..cubicTo(
-         size.width - (width * 0.50),
+        size.width - (width * 0.50),
         (loc + s) * size.height,
         size.width - width,
         (loc + s - s * 0.10) * size.height,
