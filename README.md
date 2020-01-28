@@ -2,7 +2,7 @@
 
 A Flutter widget that provides an easy to use animated drawer.
 
-![Gif](https://github.com/rafalbednarczuk/curved_navigation_bar/blob/master/example.gif "Fancy Gif")
+![Gif](https://github.com/undrbridge/curved_drawer/blob/master/example/example.GIF "Demo Gif")
 
 
 ### Add dependency
