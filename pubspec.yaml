@@ -1,6 +1,6 @@
 name: curved_drawer
 description: A Flutter widget that provides an easy to use animated drawer.
-version: 0.1.0
+version: 0.1.1
 homepage: https://github.com/undrbridge/curved_drawer
 
 environment:

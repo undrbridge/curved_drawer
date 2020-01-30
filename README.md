@@ -9,7 +9,7 @@ A Flutter widget that provides an easy to use animated drawer.
 
 ```yaml
 dependencies:
-  curved_drawer: ^0.0.1 #latest version
+  curved_drawer: ^0.1.1 #latest version
 ```
 ### Simple Implementation
 ```dart

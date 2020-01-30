@@ -1,3 +1,6 @@
+## [0.1.1] 
+- Changed 3rd Cubic component from 0.45 to 0.50 multiplier
+
 ## [0.1.0] 
 - Formatting Changes in the dart files
 
