@@ -32,7 +32,7 @@ class DrawerCustomPainter extends CustomPainter {
         (loc + s * 0.2) * size.height,
         width * 0.50,
         loc * size.height,
-        width * 0.450,
+        width * 0.500,
         (loc + s * 0.50) * size.height,
       )
       ..cubicTo(
@@ -55,7 +55,7 @@ class DrawerCustomPainter extends CustomPainter {
         (loc + s * 0.2) * size.height,
         size.width - (width * 0.50),
         loc * size.height,
-        size.width - (width * 0.450),
+        size.width - (width * 0.500),
         (loc + s * 0.50) * size.height,
       )
       ..cubicTo(
