@@ -1,5 +1,4 @@
 import 'package:curved_drawer/curved_drawer.dart';
-import 'package:curved_drawer/src/drawer_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 

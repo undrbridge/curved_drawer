@@ -1,7 +1,7 @@
 library curved_drawer;
 
 import 'package:curved_drawer/src/drawer_custom_painter.dart';
-import 'package:curved_drawer/src/drawer_item.dart';
+import 'package:curved_drawer/src/drawer_nav_item.dart';
 import 'package:flutter/material.dart';
 
 class CurvedDrawer extends StatefulWidget {
@@ -201,4 +201,13 @@ class _CurvedDrawerState extends State<CurvedDrawer>
           duration: widget.animationDuration, curve: widget.animationCurve);
     });
   }
+}
+
+class DrawerItem {
+  final String label;
+  final Icon icon;
+  const DrawerItem({
+    this.label = "",
+    @required this.icon,
+  }) : assert(icon != null);
 }

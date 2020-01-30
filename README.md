@@ -9,7 +9,7 @@ A Flutter widget that provides an easy to use animated drawer.
 
 ```yaml
 dependencies:
-  curved_drawer: ^0.1.1 #latest version
+  curved_drawer: ^0.1.2 #latest version
 ```
 ### Simple Implementation
 ```dart
@@ -33,13 +33,13 @@ Scaffold(
 
 ### Attributes
 
-items: List of DrawerItems  
-index: index of selected item, can be used to change current index or to set initial index  
-color: Color of drawer, default Colors.white 
-buttonBackgroundColor: background color of floating button, default same as color attribute  
-backgroundColor: Color of NavigationBar's background, default Colors.transparent 
+items: List of DrawerItems 
+index: Index of selected item - can be used to change current index or to set initial index  
+color: Color of drawer - default Colors.white 
+buttonBackgroundColor: Background color of floating button - default same as color attribute  
+backgroundColor: Color of NavigationBar's background - default Colors.transparent 
 onTap: Function handling taps on items  
-animationCurve: Curves interpolating button change animation, default Curves.easeOutCubic  
-animationDuration: Duration of button change animation, default Duration(milliseconds: 600)  
-width: Width of Drawer, min 50.0, max 100.0
-isEndDrawer: set to true if used as as an end drawer, default is false
+animationCurve: Curves interpolating button change animation - default Curves.easeOutCubic  
+animationDuration: Duration of button change animation - default Duration(milliseconds: 600)  
+width: Width of Drawer - default min 50.0, max 100.0
+isEndDrawer: Set to true if used as as an end drawer - default is false

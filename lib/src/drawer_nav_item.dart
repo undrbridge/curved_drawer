@@ -1,14 +1,5 @@
 import 'package:flutter/material.dart';
 
-class DrawerItem {
-  final String label;
-  final Icon icon;
-  const DrawerItem({
-    this.label = "",
-    @required this.icon,
-  }) : assert(icon != null);
-}
-
 class DrawerNavItem extends StatelessWidget {
   final Icon icon;
   final String label;
