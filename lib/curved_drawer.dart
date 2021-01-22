@@ -68,7 +68,7 @@ class _CurvedDrawerState extends State<CurvedDrawer>
   void initState() {
     super.initState();
     _items = widget.items.map((item) {
-      DrawerNavItem(
+      return DrawerNavItem(
         icon: item.icon,
         label: item.label,
         color: widget.labelColor,
