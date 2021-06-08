@@ -11,11 +11,11 @@ void main() {
     DrawerItem(icon: messageIcon)
   ];
   testWidgets('Widget with Icons', (WidgetTester tester) async {
-    await tester.pumpWidget(CurvedDrawer(items: _items));
-    final personFinder = find.byIcon(personIcon.icon);
-    final messageFinder = find.byIcon(messageIcon.icon);
+    await tester.pumpWidget(MaterialApp(home: CurvedDrawer(items: _items)));
+    final personFinder = find.byIcon(personIcon.icon!);
+    final messageFinder = find.byIcon(messageIcon.icon!);
 
-    expect(personFinder, findsOneWidget);
-    expect(messageFinder, findsOneWidget);
+    expect(personFinder, findsWidgets);
+    expect(messageFinder, findsWidgets);
   });
 }

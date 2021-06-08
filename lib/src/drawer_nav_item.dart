@@ -7,20 +7,21 @@ class DrawerNavItem extends StatelessWidget {
   final Color color;
   final Color background;
 
-  const DrawerNavItem(
-      {Key key,
-      @required this.icon,
-      this.label = "",
-      this.size = 25.0,
-      this.color = Colors.black54,
-      this.background = Colors.white})
-      : super(key: key);
+  const DrawerNavItem({
+    Key? key,
+    required this.icon,
+    this.label = "",
+    this.size = 25.0,
+    this.color = Colors.black54,
+    this.background = Colors.white,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Material(
       shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(this.size)),
+        borderRadius: BorderRadius.circular(this.size),
+      ),
       color: this.background,
       type: MaterialType.button,
       child: Padding(
@@ -47,52 +48,55 @@ class DrawerNavItem extends StatelessWidget {
 }
 
 class NavButton extends StatelessWidget {
-  final double position;
-  final int length;
-  final int index;
-  final bool isEndDrawer;
-  final double width;
-  final Color color;
-  final ValueChanged<int> onTap;
-  final Icon icon;
+  final double? position;
+  final int? length;
+  final int? index;
+  final bool? isEndDrawer;
+  final double? width;
+  final Color? color;
+  final ValueChanged<int?>? onTap;
+  final Icon? icon;
 
-  NavButton(
-      {this.onTap,
-      this.position,
-      this.length,
-      this.isEndDrawer,
-      this.width,
-      this.color,
-      this.index,
-      this.icon});
+  NavButton({
+    this.onTap,
+    this.position,
+    this.length,
+    this.isEndDrawer,
+    this.width,
+    this.color,
+    this.index,
+    this.icon,
+  });
 
   @override
   Widget build(BuildContext context) {
-    final desiredPosition = 1.0 / length * index;
-    final difference = (position - desiredPosition).abs();
-    final verticalAlignment = 1 - length * difference;
-    final opacity = length * difference;
-    final directionMultiplier = isEndDrawer ? 1 : -1;
+    final desiredPosition = 1.0 / length! * index!;
+    final difference = (position! - desiredPosition).abs();
+    final verticalAlignment = 1 - length! * difference;
+    final opacity = length! * difference;
+    final directionMultiplier = isEndDrawer! ? 1 : -1;
     return Expanded(
       child: GestureDetector(
         onTap: () {
-          onTap(index);
+          onTap!(index);
         },
         child: Container(
-            width: this.width,
-            child: Transform.translate(
-              offset: Offset(
-                  difference < 1.0 / length
-                      ? verticalAlignment * directionMultiplier * 40
-                      : 0,
-                  0),
-              child: Opacity(
-                  opacity: difference < 1.0 / length * 0.99 ? opacity : 1.0,
-                  child: Icon(
-                    icon.icon,
-                    color: this.color,
-                  )),
-            )),
+          width: this.width,
+          child: Transform.translate(
+            offset: Offset(
+                difference < 1.0 / length!
+                    ? verticalAlignment * directionMultiplier * 40
+                    : 0,
+                0),
+            child: Opacity(
+              opacity: difference < 1.0 / length! * 0.99 ? opacity : 1.0,
+              child: Icon(
+                icon!.icon,
+                color: this.color,
+              ),
+            ),
+          ),
+        ),
       ),
     );
   }
